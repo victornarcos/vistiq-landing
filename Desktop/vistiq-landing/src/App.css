@@ -1,27 +1,4 @@
-/* ==========================================
-   Fonts
-========================================== */
-@font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 /* ==========================================
    Global Variables & Base Styles
@@ -33,7 +10,7 @@
   --bg-dark: #000000;
   --card-bg: rgba(10, 20, 10, 0.85);
   --border-glow: 1px solid rgba(0, 255, 136, 0.3);
-  --font-family: 'Orbitron', sans-serif;
+  --font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   --button-gradient: linear-gradient(135deg, #00ff88, #00aa55);
   --button-hover-gradient: linear-gradient(135deg, #00ffaa, #00bb66);
   --text-light: #2cef00;
