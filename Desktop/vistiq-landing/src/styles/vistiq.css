@@ -1,0 +1,327 @@
+/* ==========================================
+   VISTIQ LANDING – Futuristic Green Neon Theme
+   Based on wallet.css & payment.css
+========================================== */
+
+.vistiq-root {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #001a0f, #000000);
+  color: #80ffaa;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+  font-variant-emoji:text;
+}
+
+/* Animated grid background */
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gridMove 20s linear infinite;
+}
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Noise overlay – subtle texture */
+.noise-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  padding: 40px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #00ff88, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  animation: titlePulse 3s infinite alternate;
+}
+@keyframes titlePulse {
+  0% { text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88; }
+  100% { text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ffff; }
+}
+
+.hero-sub {
+  margin-top: 10px;
+  color: #80ffaa;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Base button styles */
+.btn {
+  padding: 12px 26px;
+  border-radius: 60px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
+  background: transparent;
+  border: 1px solid;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 0 10px transparent;
+}
+
+/* Neon green variant (primary) */
+.neon-green {
+  border-color: #00ff88;
+  color: #00ff88;
+}
+.neon-green:hover {
+  background: linear-gradient(135deg, #00ff88, #00aa55);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Dark green variant (for secondary) */
+.neon-blue {
+  border-color: #00aa55;
+  color: #00aa55;
+}
+.neon-blue:hover {
+  background: linear-gradient(135deg, #00aa55, #008844);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 170, 85, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Another green variant (replaces purple) */
+.neon-purple {
+  border-color: #00aa55;
+  color: #00aa55;
+}
+.neon-purple:hover {
+  background: linear-gradient(135deg, #00aa55, #008844);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 170, 85, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Features section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 60px;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card {
+  padding: 20px;
+  background: rgba(10, 20, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  border-color: rgba(0, 255, 136, 0.6);
+}
+.feature-card h2 {
+  color: #00ff88;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px currentColor;
+}
+.feature-card p {
+  color: #80ffaa;
+}
+
+/* Download section */
+.download-section {
+  text-align: center;
+  padding: 60px;
+  position: relative;
+  z-index: 2;
+}
+.download-section h2 {
+  font-size: 2rem;
+  color: #00ff88;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  background: linear-gradient(135deg, #00ff88, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.download-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.download-card {
+  width: 220px;
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: rgba(0, 20, 0, 0.6);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #00ff88;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.download-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .features {
+    padding: 40px 20px;
+  }
+  .download-card {
+    width: 180px;
+  }
+}
+
+
+/* ==========================================
+   VISTIQ LANDING – Futuristic Green Neon Theme
+   Updated with iOS download and Terms & Conditions
+========================================== */
+
+/* Terms & Conditions Section */
+.terms-section {
+  max-width: 900px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  font-variant-emoji:text;
+}
+
+.terms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 24px;
+  background: rgba(10, 20, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 32px;
+  transition: all 0.3s ease;
+  font-variant-emoji:text;
+}
+.terms-header:hover {
+  border-color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  font-variant-emoji:text;
+}
+.terms-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00ff88;
+  text-shadow: 0 0 8px currentColor;
+}
+.toggle-icon {
+  font-size: 1.2rem;
+  color: #00ff88;
+  transition: transform 0.3s ease;
+}
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+.terms-content {
+  margin-top: 16px;
+  padding: 24px;
+  background: rgba(10, 20, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 32px;
+  color: #80ffaa;
+  line-height: 1.6;
+  overflow: hidden;
+}
+.terms-content p {
+  margin-bottom: 16px;
+}
+.terms-content strong {
+  color: #00ff88;
+}
+.terms-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.terms-footer a {
+  color: #00ff88;
+  text-decoration: none;
+  border-bottom: 1px dashed #00ff88;
+}
+.terms-footer a:hover {
+  text-shadow: 0 0 8px #00ff88;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .terms-header h2 {
+    font-size: 1.2rem;
+  }
+  .terms-content {
+    padding: 16px;
+  }
+}
