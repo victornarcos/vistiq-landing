@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";   // ✅ added
 import "../styles/vistiq.css";
 import "../styles/app.css";
 export default function VistiqLanding() {
   const [termsOpen, setTermsOpen] = useState(false);
-
+  const navigate = useNavigate();                 // ✅ added
+  
   return (
     <div className="vistiq-root">
       {/* BACKGROUND GRID */}
@@ -34,6 +36,10 @@ export default function VistiqLanding() {
           <a href="/downloads/vistiq.ipa" download className="btn neon-green">
             Download IPA (iOS)
           </a>
+		   {/* ✅ added Enter App button */}
+        <button onClick={() => navigate("/login")} className="btn neon-green">
+          Enter App
+        </button>
         </div>
       </section>
 
