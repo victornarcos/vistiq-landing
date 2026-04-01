@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";   // ✅ added
 import "../styles/vistiq.css";
 import "../styles/app.css";
+
 export default function VistiqLanding() {
   const [termsOpen, setTermsOpen] = useState(false);
-  const navigate = useNavigate();                 // ✅ added
   
   return (
     <div className="vistiq-root">
@@ -36,10 +35,15 @@ export default function VistiqLanding() {
           <a href="/downloads/vistiq.ipa" download className="btn neon-green">
             Download IPA (iOS)
           </a>
-		   {/* ✅ added Enter App button */}
-        <button onClick={() => navigate("/login")} className="btn neon-green">
-          Enter App
-        </button>
+          {/* Launch Web App button */}
+          <a 
+            href="https://app.vistiq.org/login" 
+            className="btn neon-green"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Launch App
+          </a>
         </div>
       </section>
 
@@ -75,6 +79,14 @@ export default function VistiqLanding() {
             iOS IPA
           </a>
           {/* Removed the "Web App" button that used navigate */}
+          <a 
+            href="https://app.vistiq.org/login" 
+            className="download-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Web App
+          </a>
         </div>
       </section>
 
